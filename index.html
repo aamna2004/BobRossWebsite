@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "footer footer";
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 1.75em;
+      }
+      header {
+        grid-area: header;
+        background-color: rgb(31, 69, 41);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      #title {
+        font-size: 2.5em;
+        color: wheat;
+      }
+      #logo {
+        width: 100px;
+        height: auto;
+      }
+      sidebar {
+        grid-area: sidebar;
+        background-color: #ddd;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+      sidebar a {
+        margin-bottom: 15px;
+        padding: 15px;
+        background-color: rgb(71, 102, 59);
+        color: white;
+        border: none;
+        font-size: 0.9em;
+        text-decoration: none;
+      }
+      sidebar button:hover {
+        background-color: rgb(238, 211, 177);
+      }
+      main {
+        grid-area: content;
+        padding: 20px;
+        display: grid;
+        grid-template-rows: 200px auto;
+        gap: 20px;
+      }
+      .image-section {
+        background-color: #f3f3f3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        padding: 20px;
+        height: 200px;
+      }
+      .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+      }
+      .content-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .content-item {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border: 1px solid #ccc;
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: rgb(71, 102, 59);
+        color: white;
+        border: none;
+        font-size: 0.9em;
+        margin-left: 20px; 
+      }
+
+      button:hover {
+        background-color: rgb(232, 236, 215);
+      }
+      
+      footer {
+        grid-area: footer;
+        background-color: rgb(31, 69, 41);
+        text-align: center;
+        padding: 10px;
+        color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="title">Bob Ross</div>
+      <img
+        id="logo"
+        src="https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/c/3/7/2245-9dae-4033-958e-fdc8b72c4b7f.png"
+        alt="Logo"
+      />
+    </header>
+
+    <sidebar>
+      <a href="index.html">Home</a>
+      <a href="Painting.html">Paintings</a>
+      <a href="Life.html">Life Story</a>
+    </sidebar>
+
+    <main>
+      <div class="image-section">
+        <img
+          class="image-change"
+          src="https://i.pinimg.com/originals/ca/59/c6/ca59c6ba8b366bc4355d5092e12b6d52.png"
+          alt="Bob Ross Painting"
+        />
+      </div>
+
+      <div class="content-box">
+        <div class="content-item">
+          Robert Norman Ross was an American painter and art instructor who
+          created and hosted "The Joy of Painting", an instructional television
+          program that aired from 1983 to 1994.
+        </div>
+        <div class="content-item">
+          His mission was to take the mystery out of art so amateur painters
+          could experience the joy of creating a masterpiece.
+        </div>
+        <div class="content-item">
+          Bob Ross is known for his signature landscape paintings filled with
+          "happy little trees" He's most famous paintings include the "Mystic
+          Mountain," where he skillfully captured the ethereal beauty of a
+          distant mountain range surrounded by mist.
+          <button>Click Here</button>
+        </div>
+        <div class="content-item">
+          Steve Ross is Bob Ross’ son. He is an American painting instructor and
+          TV personality. Following in his father’s footsteps, Steve became a
+          painter and helped keep Bob Ross’ painting traditions alive
+          <button>Click Here</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      &copy Aamna Fathima    
+    </footer>
+
+    
+  </body>
+</html>
